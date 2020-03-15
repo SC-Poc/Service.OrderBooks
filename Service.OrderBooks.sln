@@ -1,0 +1,109 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Client", "3. Client", "{655225E4-2F4C-4D07-82FB-7B4947EF5A7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Items", "0. Solution Items", "{85EB7950-61F2-4B83-9F3E-F74ECCE0D3C8}"
+ProjectSection(SolutionItems) = preProject
+	.dockerignore = .dockerignore
+	.editorconfig = .editorconfig
+	.gitattributes = .gitattributes
+	.gitignore = .gitignore
+	LICENSE = LICENSE
+	README.md = README.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Tests", "4. Tests", "{7F3DBAA2-139B-401D-A33F-1409A9BB4DE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderBooks", "src\OrderBooks\OrderBooks.csproj", "{D9AE04E2-3801-499E-8E95-6F2B2B4BFB41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderBooks.Client", "src\OrderBooks.Client\OrderBooks.Client.csproj", "{9B71FE5F-2279-411C-9920-4159E3635E36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Domain", "1. Domain", "{0CAA168B-AFD6-474F-A12F-4BBC538C3F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Repositories", "2. Repositories", "{2A65F3B7-FEF9-4075-AEC9-F93E26B03A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderBooks.Domain", "src\OrderBooks.Domain\OrderBooks.Domain.csproj", "{19D51B68-F1A4-430C-B7E4-ADBE59B878AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderBooks.Services", "src\OrderBooks.Services\OrderBooks.Services.csproj", "{231BE830-B8A3-4BE0-AF31-79AE7DBCA260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderBooks.Repositories", "src\OrderBooks.Repositories\OrderBooks.Repositories.csproj", "{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".protos", ".protos", "{910F81EF-0AE9-4454-8BFF-0CFE82C6CCC1}"
+ProjectSection(SolutionItems) = preProject
+	.protos\isalive.proto = .protos\isalive.proto
+	.protos\order-books.proto = .protos\order-books.proto
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{52A44EBD-E41E-4004-919D-FFC27AF31789}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{BEEC5681-757C-456A-A220-B2590CE29A74}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
+	.github\workflows\nuget-client.yml = .github\workflows\nuget-client.yml
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "tests\TestClient\TestClient.csproj", "{ED1651D9-F50D-4B1A-AF63-6C32D88E1795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderBooks.Tests", "tests\OrderBooks.Tests\OrderBooks.Tests.csproj", "{2436CAB3-A5B5-4757-ADF4-983A6C752D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderBooks.Services.Tests", "tests\OrderBooks.Services.Tests\OrderBooks.Services.Tests.csproj", "{245DEE93-BD8A-4511-9968-905ECD0F9E5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9AE04E2-3801-499E-8E95-6F2B2B4BFB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9AE04E2-3801-499E-8E95-6F2B2B4BFB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9AE04E2-3801-499E-8E95-6F2B2B4BFB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9AE04E2-3801-499E-8E95-6F2B2B4BFB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B71FE5F-2279-411C-9920-4159E3635E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B71FE5F-2279-411C-9920-4159E3635E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B71FE5F-2279-411C-9920-4159E3635E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B71FE5F-2279-411C-9920-4159E3635E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D51B68-F1A4-430C-B7E4-ADBE59B878AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D51B68-F1A4-430C-B7E4-ADBE59B878AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D51B68-F1A4-430C-B7E4-ADBE59B878AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D51B68-F1A4-430C-B7E4-ADBE59B878AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231BE830-B8A3-4BE0-AF31-79AE7DBCA260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231BE830-B8A3-4BE0-AF31-79AE7DBCA260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231BE830-B8A3-4BE0-AF31-79AE7DBCA260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231BE830-B8A3-4BE0-AF31-79AE7DBCA260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1651D9-F50D-4B1A-AF63-6C32D88E1795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1651D9-F50D-4B1A-AF63-6C32D88E1795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1651D9-F50D-4B1A-AF63-6C32D88E1795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1651D9-F50D-4B1A-AF63-6C32D88E1795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2436CAB3-A5B5-4757-ADF4-983A6C752D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2436CAB3-A5B5-4757-ADF4-983A6C752D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2436CAB3-A5B5-4757-ADF4-983A6C752D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2436CAB3-A5B5-4757-ADF4-983A6C752D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245DEE93-BD8A-4511-9968-905ECD0F9E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245DEE93-BD8A-4511-9968-905ECD0F9E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245DEE93-BD8A-4511-9968-905ECD0F9E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245DEE93-BD8A-4511-9968-905ECD0F9E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B71FE5F-2279-411C-9920-4159E3635E36} = {655225E4-2F4C-4D07-82FB-7B4947EF5A7A}
+		{19D51B68-F1A4-430C-B7E4-ADBE59B878AF} = {0CAA168B-AFD6-474F-A12F-4BBC538C3F4A}
+		{231BE830-B8A3-4BE0-AF31-79AE7DBCA260} = {0CAA168B-AFD6-474F-A12F-4BBC538C3F4A}
+		{83DC2D75-18A6-485F-BF60-DDFB3C00E2E2} = {2A65F3B7-FEF9-4075-AEC9-F93E26B03A44}
+		{BEEC5681-757C-456A-A220-B2590CE29A74} = {52A44EBD-E41E-4004-919D-FFC27AF31789}
+		{ED1651D9-F50D-4B1A-AF63-6C32D88E1795} = {7F3DBAA2-139B-401D-A33F-1409A9BB4DE8}
+		{2436CAB3-A5B5-4757-ADF4-983A6C752D58} = {7F3DBAA2-139B-401D-A33F-1409A9BB4DE8}
+		{245DEE93-BD8A-4511-9968-905ECD0F9E5E} = {7F3DBAA2-139B-401D-A33F-1409A9BB4DE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {196C39E2-2F2E-46AB-BA2A-0D2E7E171B5A}
+	EndGlobalSection
+EndGlobal

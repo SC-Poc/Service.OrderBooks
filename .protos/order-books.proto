@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "Service.OrderBooks.Contracts";
+
+package com.swisschain.grpc.messages.orderbooks;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+service OrderBooks {
+    rpc GetAll (google.protobuf.Empty) returns (GetAllOrderBooksResponse);
+    rpc GetByAssetPairId (GetOrderBookByAssetPairIdRequest) returns (GetOrderBookByAssetPairIdResponse);
+}
+
+message GetAllOrderBooksResponse {
+    repeated OrderBook order_books = 1;
+}
+
+message GetOrderBookByAssetPairIdRequest {
+    string asset_pair_id = 1;
+}
+
+message GetOrderBookByAssetPairIdResponse {
+    OrderBook order_book = 1;
+}
+
+message OrderBook {
+    string asset_pair_id = 1;
+    google.protobuf.Timestamp timestamp = 2;
+    repeated LimitOrder limit_orders = 3;
+}
+
+message LimitOrder {
+    string id = 1;
+    string price = 2;
+    string volume = 3;
+    string wallet_id = 4;
+    LimitOrderType type = 5;
+}
+
+enum LimitOrderType {
+    NONE = 0;
+    SELL = 1;
+    BUY = 2;
+}
