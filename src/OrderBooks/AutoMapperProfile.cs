@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Globalization;
 using AutoMapper;
 using Google.Protobuf.WellKnownTypes;
@@ -11,7 +12,11 @@ namespace OrderBooks
         public AutoMapperProfile()
         {
             CreateMap<OrderBook, Service.OrderBooks.Contracts.OrderBook>(MemberList.Destination)
-                .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(src => src.Timestamp.ToTimestamp()));
+                .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(src => src.Timestamp.ToTimestamp()))
+                .ForMember(dest => dest.LimitOrders, opt => opt.Ignore())
+                .AfterMap((src, dest, context) =>
+                    dest.LimitOrders.AddRange(
+                        context.Mapper.Map<List<Service.OrderBooks.Contracts.LimitOrder>>(src.LimitOrders)));
 
             CreateMap<LimitOrder, Service.OrderBooks.Contracts.LimitOrder>(MemberList.Destination)
                 .ForMember(dest => dest.Price,
