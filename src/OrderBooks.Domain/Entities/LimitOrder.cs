@@ -25,7 +25,7 @@ namespace OrderBooks.Domain.Entities
         /// <summary>
         /// The wallet identifier.
         /// </summary>
-        public Guid WalletId { get; set; }
+        public string WalletId { get; set; }
         
         /// <summary>
         /// The limit order type.

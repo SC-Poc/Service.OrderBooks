@@ -25,9 +25,14 @@ namespace OrderBooks.Client.Models.OrderBooks
         public decimal Volume { get; set; }
 
         /// <summary>
+        /// The wallet identifier.
+        /// </summary>
+        public string WalletId { get; set; }
+
+        /// <summary>
         /// The limit order type.
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public LimitOrderType Type { get; set; }
-    } 
+    }
 }

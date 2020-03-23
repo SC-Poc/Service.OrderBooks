@@ -63,6 +63,7 @@ namespace OrderBooks.Client.Grpc
                 Id = Guid.Parse(limitOrder.Id),
                 Price = decimal.Parse(limitOrder.Price),
                 Volume = decimal.Parse(limitOrder.Volume),
+                WalletId = limitOrder.WalletId,
                 Type = ToModel(limitOrder.Type)
             };
         }

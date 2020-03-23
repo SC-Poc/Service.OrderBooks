@@ -74,6 +74,7 @@ namespace OrderBooks.Rabbit.Subscribers
                         Id = Guid.Parse(level.OrderId),
                         Price = decimal.Parse(level.Price),
                         Volume = decimal.Parse(level.Volume),
+                        WalletId = level.WalletId,
                         Type = message.OrderBook.IsBuy
                             ? LimitOrderType.Buy
                             : LimitOrderType.Sell
