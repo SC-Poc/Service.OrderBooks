@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using MatchingEngine.Client;
@@ -38,7 +39,7 @@ namespace OrderBooks.Managers
                     {
                         Id = level.OrderId,
                         Price = level.Price,
-                        Volume = level.Volume,
+                        Volume = Math.Abs(level.Volume),
                         WalletId = level.WalletId,
                         Type = type
                     })
